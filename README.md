@@ -30,7 +30,7 @@ concatenated and returned when the stream emits the "end" event.
 
 Setup
 =====
-* Install `meteor install froatsnook:buffer-to-stream`
+* Install `meteor add froatsnook:buffer-to-stream`
 
 API
 ===
