@@ -1,7 +1,7 @@
 Package.describe({
     name: "froatsnook:stream-to-buffer",
     summary: "Read entire Stream into a Buffer (server only)",
-    version: "1.0.0",
+    version: "1.0.1",
     git: "https://github.com/froatsnook/streamToBuffer"
 });
 
