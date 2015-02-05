@@ -2,15 +2,17 @@ Read entire Stream into a Buffer (server only)
 
 Example
 =======
-    // The package `node-canvas` provides jpeg data as a stream.  We need a
-    // buffer to store in the database.
-    var stream = canvas.jpegStream();
-    var buffer = streamToBuffer(stream);
-    Products.update(productId, {
-        $set: {
-            thumb: buffer
-        }
-    });
+```javascript
+// The package `node-canvas` provides jpeg data as a stream.  We need a
+// buffer to store in the database.
+var stream = canvas.jpegStream();
+var buffer = streamToBuffer(stream);
+Products.update(productId, {
+    $set: {
+        thumb: buffer
+    }
+});
+```
 
 Why?
 ====
@@ -34,16 +36,18 @@ Setup
 
 API
 ===
-    // Convert a Stream to a Buffer.
-    var buffer = streamToBuffer(stream);
+```
+// Convert a Stream to a Buffer.
+var buffer = streamToBuffer(stream);
 
-    // Convert a Stream to a Buffer, but time out (by throwing an Error) after
-    // 30 seconds if the stream doesn't emit an "end" event.
-    try {
-        var buffer = streamToBuffer(stream, 30000); // ms
-    } catch(err) {
-        console.log("Timed out (or other error): " + err);
-    }
+// Convert a Stream to a Buffer, but time out (by throwing an Error) after
+// 30 seconds if the stream doesn't emit an "end" event.
+try {
+    var buffer = streamToBuffer(stream, 30000); // ms
+} catch(err) {
+    console.log("Timed out (or other error): " + err);
+}
+```
 
 License
 =======
